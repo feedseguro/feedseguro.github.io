@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "tipo": "post",
+    "dificultad": "facil",
+    "categoria": "fake_news",
+    "autor": "NexoEstudiantil",
+    "avatar": "https://api.dicebear.com/9.x/bottts/svg?seed=nexo",
+    "contenido": "Te llega un post que dice: 'Mañana suspenden clases por tormenta'. No tiene fuente oficial.",
+    "opciones": [
+      {"texto":"Lo comparto ya para avisar", "correcta":false, "feedback":"Primero verificá en canales oficiales."},
+      {"texto":"Busco confirmación en la escuela/medios oficiales", "correcta":true, "feedback":"Bien: verificás antes de viralizar."},
+      {"texto":"Lo publico con 'no sé si es verdad'", "correcta":false, "feedback":"Eso igual puede desinformar."}
+    ]
+  },
+  {
+    "id": 2,
+    "tipo": "post",
+    "dificultad": "media",
+    "categoria": "phishing",
+    "autor": "SoporteGameNow",
+    "avatar": "https://api.dicebear.com/9.x/bottts/svg?seed=phish",
+    "contenido": "Mensaje privado: 'Ganaste skin premium, ingresá tu contraseña acá'.",
+    "opciones": [
+      {"texto":"Entro rápido antes de que venza", "correcta":false, "feedback":"Urgencia + contraseña = alerta de phishing."},
+      {"texto":"Reviso URL oficial y no comparto credenciales", "correcta":true, "feedback":"Excelente: protegés tu cuenta."},
+      {"texto":"Le paso el mensaje a mis amigos", "correcta":false, "feedback":"Podrías exponerlos al fraude."}
+    ]
+  },
+  {
+    "id": 3,
+    "tipo": "post",
+    "dificultad": "media",
+    "categoria": "ciberbullying",
+    "autor": "ForoAnon",
+    "avatar": "https://api.dicebear.com/9.x/bottts/svg?seed=bully",
+    "contenido": "Suben un meme humillante de un compañero y se está viralizando.",
+    "opciones": [
+      {"texto":"Comento para que lo bajen y reporto", "correcta":true, "feedback":"Acción responsable y de cuidado."},
+      {"texto":"Le doy like pero no comparto", "correcta":false, "feedback":"Interaccionar también amplifica el daño."},
+      {"texto":"Lo ignoro totalmente", "correcta":false, "feedback":"Ignorar puede perpetuar la situación."}
+    ]
+  },
+  {
+    "id": 4,
+    "tipo": "post",
+    "dificultad": "facil",
+    "categoria": "privacidad",
+    "autor": "RutaUrbana",
+    "avatar": "https://api.dicebear.com/9.x/bottts/svg?seed=privacy",
+    "contenido": "Vas a publicar una foto y se ve tu dirección en el fondo.",
+    "opciones": [
+      {"texto":"La subo igual, casi no se nota", "correcta":false, "feedback":"Exponés datos sensibles."},
+      {"texto":"Recorto o no la publico", "correcta":true, "feedback":"Correcto: minimizás riesgos."},
+      {"texto":"Le pongo emojis encima y listo", "correcta":false, "feedback":"Puede no ser suficiente para ocultar datos."}
+    ]
+  },
+  {
+    "id": 5,
+    "tipo": "post",
+    "dificultad": "dificil",
+    "categoria": "persistencia",
+    "autor": "DebateLibre",
+    "avatar": "https://api.dicebear.com/9.x/bottts/svg?seed=data",
+    "contenido": "Borraste un post polémico. Un amigo dice: 'ya fue, desapareció'.",
+    "opciones": [
+      {"texto":"Sí, si lo borrás nadie lo ve más", "correcta":false, "feedback":"Puede quedar en capturas, backups o reenvíos."},
+      {"texto":"No siempre: en internet puede persistir", "correcta":true, "feedback":"Bien: entendés la huella digital."},
+      {"texto":"Depende si tenía muchos likes", "correcta":false, "feedback":"La persistencia no depende solo de likes."}
+    ]
+  }
+]
