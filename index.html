@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feed Seguro</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <h1>Feed Seguro</h1>
+      <p>Ciudadanía digital en modo red social</p>
+    </header>
+
+    <section class="panel controls">
+      <div class="alias-row">
+        <label>Alias:</label>
+        <strong id="aliasDisplay"></strong>
+        <button id="changeAliasBtn" class="btn ghost">Cambiar</button>
+      </div>
+      <div class="mode-row">
+        <button id="practiceBtn" class="btn">Práctica</button>
+        <button id="officialBtn" class="btn primary">Oficial</button>
+      </div>
+      <div class="status-row">
+        <span>Puntaje: <b id="score">0</b></span>
+        <span>Precisión: <b id="accuracy">0%</b></span>
+        <span>Combo: <b id="combo">0</b></span>
+      </div>
+      <div class="timer-wrap">
+        <div class="timer-bar" id="timerBar"></div>
+      </div>
+    </section>
+
+    <section id="feedCard" class="panel card hidden">
+      <div class="card-head">
+        <img id="avatar" alt="avatar" />
+        <div>
+          <h2 id="author"></h2>
+          <small><span id="category"></span> · <span id="difficulty"></span></small>
+        </div>
+      </div>
+      <p id="content"></p>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback"></p>
+    </section>
+
+    <section id="endScreen" class="panel hidden">
+      <h2>Resultado final</h2>
+      <p>Modo: <b id="endMode"></b></p>
+      <p>Puntaje: <b id="endScore"></b></p>
+      <p>Precisión: <b id="endAccuracy"></b></p>
+      <p>Combo máximo: <b id="endMaxCombo"></b></p>
+      <p>Tiempo efectivo: <b id="endTime"></b></p>
+      <button id="playAgain" class="btn primary">Jugar otra vez</button>
+    </section>
+
+    <section class="panel">
+      <h2>Ranking local (oficial)</h2>
+      <ol id="rankingList" class="ranking"></ol>
+    </section>
+  </main>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
