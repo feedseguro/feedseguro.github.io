@@ -1,72 +1,522 @@
 [
-  {
-    "id": 1,
-    "tipo": "post",
-    "dificultad": "facil",
-    "categoria": "fake_news",
-    "autor": "NexoEstudiantil",
-    "avatar": "https://api.dicebear.com/9.x/bottts/svg?seed=nexo",
-    "contenido": "Te llega un post que dice: 'Mañana suspenden clases por tormenta'. No tiene fuente oficial.",
-    "opciones": [
-      {"texto":"Lo comparto ya para avisar", "correcta":false, "feedback":"Primero verificá en canales oficiales."},
-      {"texto":"Busco confirmación en la escuela/medios oficiales", "correcta":true, "feedback":"Bien: verificás antes de viralizar."},
-      {"texto":"Lo publico con 'no sé si es verdad'", "correcta":false, "feedback":"Eso igual puede desinformar."}
-    ]
-  },
-  {
-    "id": 2,
-    "tipo": "post",
-    "dificultad": "media",
-    "categoria": "phishing",
-    "autor": "SoporteGameNow",
-    "avatar": "https://api.dicebear.com/9.x/bottts/svg?seed=phish",
-    "contenido": "Mensaje privado: 'Ganaste skin premium, ingresá tu contraseña acá'.",
-    "opciones": [
-      {"texto":"Entro rápido antes de que venza", "correcta":false, "feedback":"Urgencia + contraseña = alerta de phishing."},
-      {"texto":"Reviso URL oficial y no comparto credenciales", "correcta":true, "feedback":"Excelente: protegés tu cuenta."},
-      {"texto":"Le paso el mensaje a mis amigos", "correcta":false, "feedback":"Podrías exponerlos al fraude."}
-    ]
-  },
-  {
-    "id": 3,
-    "tipo": "post",
-    "dificultad": "media",
-    "categoria": "ciberbullying",
-    "autor": "ForoAnon",
-    "avatar": "https://api.dicebear.com/9.x/bottts/svg?seed=bully",
-    "contenido": "Suben un meme humillante de un compañero y se está viralizando.",
-    "opciones": [
-      {"texto":"Comento para que lo bajen y reporto", "correcta":true, "feedback":"Acción responsable y de cuidado."},
-      {"texto":"Le doy like pero no comparto", "correcta":false, "feedback":"Interaccionar también amplifica el daño."},
-      {"texto":"Lo ignoro totalmente", "correcta":false, "feedback":"Ignorar puede perpetuar la situación."}
-    ]
-  },
-  {
-    "id": 4,
-    "tipo": "post",
-    "dificultad": "facil",
-    "categoria": "privacidad",
-    "autor": "RutaUrbana",
-    "avatar": "https://api.dicebear.com/9.x/bottts/svg?seed=privacy",
-    "contenido": "Vas a publicar una foto y se ve tu dirección en el fondo.",
-    "opciones": [
-      {"texto":"La subo igual, casi no se nota", "correcta":false, "feedback":"Exponés datos sensibles."},
-      {"texto":"Recorto o no la publico", "correcta":true, "feedback":"Correcto: minimizás riesgos."},
-      {"texto":"Le pongo emojis encima y listo", "correcta":false, "feedback":"Puede no ser suficiente para ocultar datos."}
-    ]
-  },
-  {
-    "id": 5,
-    "tipo": "post",
-    "dificultad": "dificil",
-    "categoria": "persistencia",
-    "autor": "DebateLibre",
-    "avatar": "https://api.dicebear.com/9.x/bottts/svg?seed=data",
-    "contenido": "Borraste un post polémico. Un amigo dice: 'ya fue, desapareció'.",
-    "opciones": [
-      {"texto":"Sí, si lo borrás nadie lo ve más", "correcta":false, "feedback":"Puede quedar en capturas, backups o reenvíos."},
-      {"texto":"No siempre: en internet puede persistir", "correcta":true, "feedback":"Bien: entendés la huella digital."},
-      {"texto":"Depende si tenía muchos likes", "correcta":false, "feedback":"La persistencia no depende solo de likes."}
-    ]
-  }
+    {
+        "id": 1,
+        "tipo": "fake_news",
+        "dificultad": "facil",
+        "categoria": "Fake News",
+        "autor": "NoticiasExpress",
+        "avatar": "📰",
+        "contenido": "URGENTE: WhatsApp será pago a partir de mañana. Compartí este mensaje para mantenerlo gratis.",
+        "opciones": [
+            {
+                "texto": "Compartir",
+                "correcta": false,
+                "feedback": "Compartir sin verificar ayuda a viralizar información falsa."
+            },
+            {
+                "texto": "Verificar la fuente",
+                "correcta": true,
+                "feedback": "Correcto. Antes de compartir, conviene verificar la fuente."
+            },
+            {
+                "texto": "Ignorar sin revisar",
+                "correcta": false,
+                "feedback": "Lo mejor es verificar antes de sacar conclusiones."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "tipo": "phishing",
+        "dificultad": "facil",
+        "categoria": "Seguridad",
+        "autor": "BancoOnline",
+        "avatar": "🏦",
+        "contenido": "Tu cuenta será suspendida en 10 minutos si no confirmás tus datos.",
+        "opciones": [
+            {
+                "texto": "Ingresar al enlace",
+                "correcta": false,
+                "feedback": "Los mensajes con urgencia extrema suelen ser phishing."
+            },
+            {
+                "texto": "Revisar remitente",
+                "correcta": true,
+                "feedback": "Correcto. Siempre conviene verificar el remitente."
+            },
+            {
+                "texto": "Enviar contraseña",
+                "correcta": false,
+                "feedback": "Nunca debés compartir contraseñas."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "tipo": "ciberbullying",
+        "dificultad": "facil",
+        "categoria": "Convivencia",
+        "autor": "Grupo del salón",
+        "avatar": "💬",
+        "contenido": "Alguien propone subir una foto vergonzosa de un compañero.",
+        "opciones": [
+            {
+                "texto": "Compartirla",
+                "correcta": false,
+                "feedback": "Eso puede formar parte de una situación de ciberbullying."
+            },
+            {
+                "texto": "Frenar la situación",
+                "correcta": true,
+                "feedback": "Correcto. No participar ayuda a proteger a la persona."
+            },
+            {
+                "texto": "Reírse sin compartir",
+                "correcta": false,
+                "feedback": "Apoyar la burla también puede causar daño."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "tipo": "privacidad",
+        "dificultad": "facil",
+        "categoria": "Privacidad",
+        "autor": "Perfil personal",
+        "avatar": "📸",
+        "contenido": "Subís una foto donde se ve claramente tu dirección.",
+        "opciones": [
+            {
+                "texto": "Publicarla igual",
+                "correcta": false,
+                "feedback": "Eso puede exponerte a riesgos."
+            },
+            {
+                "texto": "Ocultar datos sensibles",
+                "correcta": true,
+                "feedback": "Correcto. Revisar la información visible es importante."
+            },
+            {
+                "texto": "Mandarla a cualquier grupo",
+                "correcta": false,
+                "feedback": "Compartir información sensible aumenta la exposición."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "tipo": "persistencia",
+        "dificultad": "facil",
+        "categoria": "Huella digital",
+        "autor": "Historia destacada",
+        "avatar": "⏳",
+        "contenido": "Publicás una broma pesada pensando que mañana nadie la recordará.",
+        "opciones": [
+            {
+                "texto": "Subirla igual",
+                "correcta": false,
+                "feedback": "Lo publicado puede ser guardado o reenviado."
+            },
+            {
+                "texto": "Pensar consecuencias",
+                "correcta": true,
+                "feedback": "Correcto. Internet puede conservar información mucho tiempo."
+            },
+            {
+                "texto": "Borrarla después",
+                "correcta": false,
+                "feedback": "Aunque la borres, alguien pudo haberla guardado."
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "tipo": "fake_news",
+        "dificultad": "facil",
+        "categoria": "Fake News",
+        "autor": "Noticias24",
+        "avatar": "🚨",
+        "contenido": "Netflix regalará cuentas premium por aniversario.",
+        "opciones": [
+            {
+                "texto": "Compartir rápido",
+                "correcta": false,
+                "feedback": "Las promociones demasiado buenas suelen ser sospechosas."
+            },
+            {
+                "texto": "Buscar información oficial",
+                "correcta": true,
+                "feedback": "Correcto. Verificar fuentes oficiales es importante."
+            },
+            {
+                "texto": "Enviar a grupos",
+                "correcta": false,
+                "feedback": "Eso ayuda a viralizar posibles engaños."
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "tipo": "phishing",
+        "dificultad": "media",
+        "categoria": "Seguridad",
+        "autor": "SoporteSteam",
+        "avatar": "🎮",
+        "contenido": "Ganaste skins gratis. Iniciá sesión para reclamarlas.",
+        "opciones": [
+            {
+                "texto": "Ingresar cuenta",
+                "correcta": false,
+                "feedback": "Muchos ataques usan premios falsos para robar cuentas."
+            },
+            {
+                "texto": "Revisar dominio",
+                "correcta": true,
+                "feedback": "Correcto. El dominio puede revelar sitios falsos."
+            },
+            {
+                "texto": "Compartir enlace",
+                "correcta": false,
+                "feedback": "Eso podría poner en riesgo a otros usuarios."
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "tipo": "privacidad",
+        "dificultad": "media",
+        "categoria": "Privacidad",
+        "autor": "InfluencerUY",
+        "avatar": "📍",
+        "contenido": "Publicás una historia mostrando tu ubicación en tiempo real.",
+        "opciones": [
+            {
+                "texto": "Publicarla igual",
+                "correcta": false,
+                "feedback": "Compartir ubicación en tiempo real puede ser riesgoso."
+            },
+            {
+                "texto": "Esperar y publicar después",
+                "correcta": true,
+                "feedback": "Correcto. Evitar ubicación en tiempo real mejora la seguridad."
+            },
+            {
+                "texto": "Etiquetar el lugar exacto",
+                "correcta": false,
+                "feedback": "Eso aumenta la exposición."
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "tipo": "fake_news",
+        "dificultad": "media",
+        "categoria": "Fake News",
+        "autor": "UltimaHora",
+        "avatar": "🛑",
+        "contenido": "Un famoso murió según una captura viral de redes sociales.",
+        "opciones": [
+            {
+                "texto": "Compartir enseguida",
+                "correcta": false,
+                "feedback": "Las capturas pueden ser falsas o manipuladas."
+            },
+            {
+                "texto": "Buscar medios confiables",
+                "correcta": true,
+                "feedback": "Correcto. Confirmar en medios reconocidos es importante."
+            },
+            {
+                "texto": "Comentar sin verificar",
+                "correcta": false,
+                "feedback": "Eso puede contribuir a la desinformación."
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "tipo": "ciberbullying",
+        "dificultad": "media",
+        "categoria": "Convivencia",
+        "autor": "Chat grupal",
+        "avatar": "😅",
+        "contenido": "Empiezan a excluir a alguien del grupo y burlarse constantemente.",
+        "opciones": [
+            {
+                "texto": "Sumarte a las burlas",
+                "correcta": false,
+                "feedback": "Eso contribuye al acoso."
+            },
+            {
+                "texto": "Apoyar a la persona",
+                "correcta": true,
+                "feedback": "Correcto. Apoyar ayuda a reducir el daño."
+            },
+            {
+                "texto": "Ignorar totalmente",
+                "correcta": false,
+                "feedback": "No intervenir puede permitir que continúe la situación."
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "tipo": "phishing",
+        "dificultad": "media",
+        "categoria": "Seguridad",
+        "autor": "Correo Escolar",
+        "avatar": "📧",
+        "contenido": "Recibís un correo diciendo que tu cuenta educativa fue hackeada y debés cambiar la contraseña inmediatamente desde un enlace.",
+        "opciones": [
+            {
+                "texto": "Abrir el enlace rápidamente",
+                "correcta": false,
+                "feedback": "Los atacantes suelen generar urgencia para evitar que pienses."
+            },
+            {
+                "texto": "Entrar manualmente al sitio oficial",
+                "correcta": true,
+                "feedback": "Correcto. Siempre es mejor entrar manualmente al sitio oficial."
+            },
+            {
+                "texto": "Reenviar el correo a amigos",
+                "correcta": false,
+                "feedback": "Eso podría ayudar a difundir un posible ataque."
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "tipo": "persistencia",
+        "dificultad": "media",
+        "categoria": "Huella digital",
+        "autor": "Clip viral",
+        "avatar": "🎥",
+        "contenido": "Grabás a un amigo haciendo algo ridículo y el video empieza a viralizarse.",
+        "opciones": [
+            {
+                "texto": "Seguir compartiéndolo",
+                "correcta": false,
+                "feedback": "Los contenidos virales pueden afectar a las personas involucradas."
+            },
+            {
+                "texto": "Preguntarle si está de acuerdo",
+                "correcta": true,
+                "feedback": "Correcto. Respetar la privacidad y consentimiento es importante."
+            },
+            {
+                "texto": "Subirlo a más redes",
+                "correcta": false,
+                "feedback": "Eso aumenta aún más la exposición."
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "tipo": "fake_news",
+        "dificultad": "media",
+        "categoria": "Fake News",
+        "autor": "Canal Viral",
+        "avatar": "📺",
+        "contenido": "Una publicación asegura que cargar el celular durante la noche lo vuelve explosivo.",
+        "opciones": [
+            {
+                "texto": "Compartir la advertencia",
+                "correcta": false,
+                "feedback": "No toda publicación alarmante es verdadera."
+            },
+            {
+                "texto": "Buscar información técnica confiable",
+                "correcta": true,
+                "feedback": "Correcto. Verificar información técnica evita desinformación."
+            },
+            {
+                "texto": "Publicarlo en historias",
+                "correcta": false,
+                "feedback": "Eso puede expandir información falsa."
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "tipo": "privacidad",
+        "dificultad": "media",
+        "categoria": "Privacidad",
+        "autor": "PerfilGaming",
+        "avatar": "🎮",
+        "contenido": "En un stream mostrás accidentalmente tu correo y datos personales.",
+        "opciones": [
+            {
+                "texto": "No hacer nada",
+                "correcta": false,
+                "feedback": "Exponer datos personales puede generar riesgos."
+            },
+            {
+                "texto": "Ocultar o editar el contenido",
+                "correcta": true,
+                "feedback": "Correcto. Reducir exposición protege tu privacidad."
+            },
+            {
+                "texto": "Compartir el clip",
+                "correcta": false,
+                "feedback": "Eso aumenta la difusión de datos personales."
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "tipo": "ciberbullying",
+        "dificultad": "media",
+        "categoria": "Convivencia",
+        "autor": "Grupo privado",
+        "avatar": "🙄",
+        "contenido": "Crean un meme humillante sobre un compañero y lo empiezan a difundir.",
+        "opciones": [
+            {
+                "texto": "Compartirlo",
+                "correcta": false,
+                "feedback": "Difundir contenido humillante puede causar daño real."
+            },
+            {
+                "texto": "No participar y reportarlo",
+                "correcta": true,
+                "feedback": "Correcto. Frenar la difusión ayuda a reducir el acoso."
+            },
+            {
+                "texto": "Guardar el meme",
+                "correcta": false,
+                "feedback": "Aunque no lo compartas, seguir difundiendo el contenido puede ser perjudicial."
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "tipo": "fake_news",
+        "dificultad": "dificil",
+        "categoria": "Fake News",
+        "autor": "Noticias Impacto",
+        "avatar": "🧠",
+        "contenido": "Una imagen muestra supuestos resultados científicos impactantes, pero no cita ninguna fuente.",
+        "opciones": [
+            {
+                "texto": "Confiar porque parece profesional",
+                "correcta": false,
+                "feedback": "Las imágenes pueden parecer creíbles sin ser reales."
+            },
+            {
+                "texto": "Buscar la fuente original",
+                "correcta": true,
+                "feedback": "Correcto. Verificar la fuente original es fundamental."
+            },
+            {
+                "texto": "Compartir por si acaso",
+                "correcta": false,
+                "feedback": "Compartir sin verificar puede difundir información falsa."
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "tipo": "phishing",
+        "dificultad": "dificil",
+        "categoria": "Seguridad",
+        "autor": "CuentaVerificada",
+        "avatar": "✔️",
+        "contenido": "Recibís un mensaje privado de una cuenta aparentemente oficial pidiendo verificar tu contraseña.",
+        "opciones": [
+            {
+                "texto": "Enviar los datos",
+                "correcta": false,
+                "feedback": "Las cuentas oficiales nunca deberían pedir contraseñas por mensaje."
+            },
+            {
+                "texto": "Verificar la autenticidad",
+                "correcta": true,
+                "feedback": "Correcto. Las cuentas falsas pueden imitar perfiles reales."
+            },
+            {
+                "texto": "Responder rápidamente",
+                "correcta": false,
+                "feedback": "Responder apresuradamente aumenta el riesgo."
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "tipo": "persistencia",
+        "dificultad": "media",
+        "categoria": "Huella digital",
+        "autor": "Recuerdo escolar",
+        "avatar": "📱",
+        "contenido": "Publicás comentarios ofensivos pensando que nadie los verá en el futuro.",
+        "opciones": [
+            {
+                "texto": "Publicarlos igual",
+                "correcta": false,
+                "feedback": "Los comentarios pueden permanecer visibles durante años."
+            },
+            {
+                "texto": "Pensar antes de publicar",
+                "correcta": true,
+                "feedback": "Correcto. Lo publicado puede afectar tu reputación futura."
+            },
+            {
+                "texto": "Crear otra cuenta falsa",
+                "correcta": false,
+                "feedback": "Las cuentas falsas no garantizan anonimato."
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "tipo": "privacidad",
+        "dificultad": "media",
+        "categoria": "Privacidad",
+        "autor": "SelfieTime",
+        "avatar": "🤳",
+        "contenido": "En una selfie se ve tu tarjeta estudiantil con varios datos personales.",
+        "opciones": [
+            {
+                "texto": "Subirla sin revisar",
+                "correcta": false,
+                "feedback": "Las imágenes pueden revelar más información de la que parece."
+            },
+            {
+                "texto": "Editar la imagen antes",
+                "correcta": true,
+                "feedback": "Correcto. Revisar fotos antes de publicarlas ayuda a proteger datos."
+            },
+            {
+                "texto": "Mandarla a grupos públicos",
+                "correcta": false,
+                "feedback": "Eso amplía aún más la exposición."
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "tipo": "ciberbullying",
+        "dificultad": "dificil",
+        "categoria": "Convivencia",
+        "autor": "Chat anónimo",
+        "avatar": "👤",
+        "contenido": "Una cuenta anónima comienza a enviar mensajes ofensivos a distintos estudiantes.",
+        "opciones": [
+            {
+                "texto": "Responder agresivamente",
+                "correcta": false,
+                "feedback": "Responder con agresividad puede empeorar la situación."
+            },
+            {
+                "texto": "Bloquear y reportar",
+                "correcta": true,
+                "feedback": "Correcto. Reportar y bloquear ayuda a frenar el acoso."
+            },
+            {
+                "texto": "Compartir capturas para burlarse",
+                "correcta": false,
+                "feedback": "Eso puede seguir difundiendo el daño."
+            }
+        ]
+    }
 ]
