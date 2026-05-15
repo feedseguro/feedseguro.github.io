@@ -21,6 +21,7 @@ const TIEMPO_OFICIAL = 12;
 let aliasJugador = "";
 let tiempoRestante = 0;
 let temporizador = null;
+let temporizadorAnimacion = null;
 let respuestaBloqueada = false;
 
 function formatearTiempo(ms) { return (ms / 1000).toFixed(2) + "s"; }
@@ -65,9 +66,29 @@ function mostrarEfectoCombo(texto) {
 
 function iniciarTemporizador() {
   clearInterval(temporizador);
+  cancelAnimationFrame(temporizadorAnimacion);
   tiempoRestante = obtenerTiempoLimite();
   tiempoInicioPregunta = performance.now();
   actualizarTemporizador();
+
+  function animarBarra() {
+    const transcurridoSeg = (performance.now() - tiempoInicioPregunta) / 1000;
+    const restanteExacto = Math.max(0, obtenerTiempoLimite() - transcurridoSeg);
+    const barraTiempo = document.getElementById("barra-tiempo");
+
+    if (barraTiempo) {
+      const porcentaje = (restanteExacto / obtenerTiempoLimite()) * 100;
+      barraTiempo.style.width = `${porcentaje}%`;
+      barraTiempo.classList.toggle("peligro", porcentaje <= 30);
+    }
+
+    if (restanteExacto > 0 && !respuestaBloqueada) {
+      temporizadorAnimacion = requestAnimationFrame(animarBarra);
+    }
+  }
+
+  temporizadorAnimacion = requestAnimationFrame(animarBarra);
+
   temporizador = setInterval(() => {
     tiempoRestante--;
     actualizarTemporizador();
@@ -127,6 +148,7 @@ function seleccionarOpcion(indiceOpcion) {
   if (respuestaBloqueada) return;
   respuestaBloqueada = true;
   clearInterval(temporizador);
+  cancelAnimationFrame(temporizadorAnimacion);
   const tiempoRespuesta = performance.now() - tiempoInicioPregunta;
   tiempoTotalRespuestaMs += tiempoRespuesta;
   const publicacion = publicacionesPartida[indiceActual];
@@ -162,6 +184,7 @@ function seleccionarOpcion(indiceOpcion) {
 function tiempoAgotado() {
   if (respuestaBloqueada) return;
   respuestaBloqueada = true;
+  cancelAnimationFrame(temporizadorAnimacion);
   tiempoTotalRespuestaMs += obtenerTiempoLimite() * 1000;
   errores++; combo = 0;
   const publicacion = publicacionesPartida[indiceActual];
@@ -211,6 +234,7 @@ function mostrarFinal() {
 
 function mostrarRanking() {
   clearInterval(temporizador);
+  cancelAnimationFrame(temporizadorAnimacion);
   const ranking = obtenerRanking();
   if (ranking.length === 0) {
     feedContainer.innerHTML = `<div class="publicacion final"><h2>🏆 Ranking local</h2><p>Todavía no hay partidas oficiales registradas.</p><button onclick="mostrarPantallaInicial()">Volver al inicio</button></div>`;
@@ -234,6 +258,7 @@ function iniciarPartida(modo) {
 function mostrarPantallaInicial() {
   aliasJugador = obtenerAlias();
   clearInterval(temporizador);
+  cancelAnimationFrame(temporizadorAnimacion);
   feedContainer.innerHTML = `
     <div class="publicacion inicio">
       <h2>🛡️ Feed Seguro</h2>
