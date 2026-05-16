@@ -231,3 +231,64 @@ th, td { padding: 8px; border-bottom: 1px solid #273449; text-align: left; }
 @keyframes combo-burst { 50% { transform: scale(1.14); letter-spacing: .04em;} }
 @keyframes pulse-danger { 50% { filter: brightness(1.2); } }
 @keyframes avatar-float { 50% { transform: translateY(-2px);} }
+
+
+/* Final del juego: animaciones de cierre */
+.final-entrada {
+  position: relative;
+  overflow: hidden;
+  animation: final-pop .45s ease both;
+}
+
+.final-celebracion {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+.final-metricas {
+  display: grid;
+  gap: 8px;
+}
+
+.final-item {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #2a3954;
+  background: #0f1a2d;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: final-reveal .35s ease forwards;
+  animation-delay: calc(var(--i) * 80ms + 120ms);
+}
+
+.final-item.destacado {
+  border-color: #eab308;
+  box-shadow: 0 0 0 1px #eab30833 inset;
+}
+
+.final-btn {
+  margin-top: 12px;
+  animation: final-btn-in .35s ease both;
+  animation-delay: 760ms;
+}
+
+@keyframes final-pop {
+  from { opacity: 0; transform: scale(.985) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes final-reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes final-btn-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  50% { transform: scale(1.06); filter: brightness(1.15); }
+}

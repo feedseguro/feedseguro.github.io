@@ -218,17 +218,20 @@ function mostrarFinal() {
   guardarResultadoRanking();
   const precision = calcularPrecisionFinal();
   feedContainer.innerHTML = `
-    <div class="publicacion final">
+    <div class="publicacion final final-entrada">
+      <div class="final-celebracion" aria-hidden="true">✨🏆✨</div>
       <h2>🏁 Partida finalizada</h2>
-      <p>👤 Alias: <strong>${aliasJugador}</strong></p>
-      <p>Modo: <strong>${modoJuego === "practica" ? "Práctica" : "Oficial"}</strong></p>
-      <p>⭐ Puntaje final: <strong>${puntaje}</strong></p>
-      <p>🎯 Precisión: <strong>${precision}%</strong></p>
-      <p>✅ Aciertos: <strong>${aciertos}</strong></p>
-      <p>❌ Errores: <strong>${errores}</strong></p>
-      <p>🔥 Combo máximo: <strong>x${comboMaximo}</strong></p>
-      <p>⏱️ Tiempo efectivo: <strong>${formatearTiempo(tiempoTotalRespuestaMs)}</strong></p>
-      <button onclick="reiniciarPartida()">Jugar de nuevo</button>
+      <div class="final-metricas">
+        <p class="final-item" style="--i:0">👤 Alias: <strong>${aliasJugador}</strong></p>
+        <p class="final-item" style="--i:1">Modo: <strong>${modoJuego === "practica" ? "Práctica" : "Oficial"}</strong></p>
+        <p class="final-item destacado" style="--i:2">⭐ Puntaje final: <strong>${puntaje}</strong></p>
+        <p class="final-item" style="--i:3">🎯 Precisión: <strong>${precision}%</strong></p>
+        <p class="final-item" style="--i:4">✅ Aciertos: <strong>${aciertos}</strong></p>
+        <p class="final-item" style="--i:5">❌ Errores: <strong>${errores}</strong></p>
+        <p class="final-item" style="--i:6">🔥 Combo máximo: <strong>x${comboMaximo}</strong></p>
+        <p class="final-item" style="--i:7">⏱️ Tiempo efectivo: <strong>${formatearTiempo(tiempoTotalRespuestaMs)}</strong></p>
+      </div>
+      <button class="final-btn" onclick="reiniciarPartida()">Jugar de nuevo</button>
     </div>`;
 }
 
